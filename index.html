@@ -11,34 +11,42 @@
 <body>
 
     <header>
+        <div class="menu-container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+    
+            <nav class="side-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="clown-portraits.html">Kreativportraits</a>
+                <a href="archiv-galerie.html">Archiv Galerie</a>
+            </nav>
+        </div>
+    
         <h1>Sina Stumpe</h1>
-        <p class="subtitle">Fotografie Portfolio</p>
-        <nav>
-            <a href="index.html" class="active">Home</a> |
-            <a href="clown-portraits.html">Kreativ(clown-)portraits</a> |
-            <a href="archiv-galerie.html">Archiv Galerie</a>
-        </nav>
+        <p class="subtitle">Digitalfotografie Portfolio</p>
     </header>
 
     <main class="home-container">
-        <section class="intro">
-            <h2>Willkommen auf meiner Website</h2>
-            <p>Hier zeige ich meine Arbeiten aus dem Fotokurs sowie ältere, neu bearbeitete Werke.</p>
-        </section>
-
-        <section class="page-links">
-            <div class="card">
-                <h3>Digitalfotografie Abschlussaufgabe</h3>
-                <p>Kreativ(clown-)portraits – Eine Serie aus 12 besonderen Aufnahmen.</p>
-                <a href="clown-portraits.html" class="btn">Zur Abschlussaufgabe</a>
+        <a href="clown-portraits.html" class="hero-link-block task-block">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2>Abschlussaufgabe</h2>
+                <p>Kreativportraits – Eine Serie aus 12 besonderen Bildern</p>
+                <span class="fake-btn">Zur Abschlussaufgabe</span>
             </div>
-
-            <div class="card">
-                <h3>Archiv & Bearbeitungen</h3>
-                <p>Eine Auswahl älterer Bilder, die durch moderne Bildbearbeitung neu zum Leben erweckt wurden.</p>
-                <a href="archiv-galerie.html" class="btn">Zur Galerie</a>
+        </a>
+    
+        <a href="archiv-galerie.html" class="hero-link-block archive-block">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2>Archiv & neue Bearbeitung</h2>
+                <p>Ältere Werke im neuen, modernen Glanz</p>
+                <span class="fake-btn">Zur Galerie</span>
             </div>
-        </section>
+        </a>
     </main>
 
     <footer>

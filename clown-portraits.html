@@ -11,93 +11,280 @@
 <body>
 
     <header>
+        <div class="menu-container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <nav class="side-nav">
+                <a href="index.html">Home</a>
+                <a href="clown-portraits.html" class="active">Kreativportraits</a>
+                <a href="archiv-galerie.html">Archiv Galerie</a>
+            </nav>
+        </div>
+
         <h1>Digitalfotografie Abschlussaufgabe</h1>
-        <p class="subtitle">Sina Stumpe - Kreativ(clown-)portraits</p>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="clown-portraits.html" class="active">Kreativ(clown-)portraits</a> |
-            <a href="archiv-galerie.html">Archiv Galerie</a>
-        </nav>
+        <p class="subtitle">Sina Stumpe - Kreativportraits</p>
     </header>
 
     <main class="gallery-page">
 
-        <!-- Block 1 (Bilder 1-3) -->
         <section class="photo-block">
-            <div class="grid-3">
-                <div class="photo-item"><img src="img/clown1.jpg" alt="Clown Portrait 1">
-                    <p class="img-caption">Foto 1</p>
-                </div>
-                <div class="photo-item"><img src="img/clown2.jpg" alt="Clown Portrait 2">
-                    <p class="img-caption">Foto 2</p>
-                </div>
-                <div class="photo-item"><img src="img/clown3.jpg" alt="Clown Portrait 3">
-                    <p class="img-caption">Foto 3</p>
-                </div>
-            </div>
             <div class="block-description">
-                <h3>Teil 1: Die Einführung in das Thema</h3>
-                <p>Hier kommt deine Beschreibung für die ersten drei Bilder hin. Was war die Idee dahinter, wie war das
-                    Licht gesetzt?</p>
+                <h3>Teil 1: Kontrast</h3>
+            </div>
+
+            <div class="grid-3">
+                <div class="photo-item">
+                    <a href="#img1">
+                        <img src="img/Kontrast.jpg" alt="Clown Portrait 1">
+                    </a>
+                    <p class="img-caption">Der Kontrast zwischen warm und kalt soll zusammen mit dem traurigen
+                        Gesichtsausdruck eine starke emotionale Wirkung erzeugen.</p>
+
+                    <div class="lightbox" id="img1">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Kontrast.jpg" alt="Clown Portrait 1 Groß">
+                            <p class="lightbox-caption">Der Kontrast zwischen warm und kalt soll zusammen mit dem
+                                traurigen Gesichtsausdruck eine starke emotionale Wirkung erzeugen.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Block 2 (Bilder 4-6) -->
         <section class="photo-block">
-            <div class="grid-3">
-                <div class="photo-item"><img src="img/clown4.jpg" alt="Clown Portrait 4">
-                    <p class="img-caption">Foto 4</p>
-                </div>
-                <div class="photo-item"><img src="img/clown5.jpg" alt="Clown Portrait 5">
-                    <p class="img-caption">Foto 5</p>
-                </div>
-                <div class="photo-item"><img src="img/clown6.jpg" alt="Clown Portrait 6">
-                    <p class="img-caption">Foto 6</p>
-                </div>
-            </div>
             <div class="block-description">
-                <h3>Teil 2: Emotionen und Mimik</h3>
-                <p>Hier kommt die Beschreibung für den zweiten 3er-Block hin. Details zur Mimik, den Farben oder
-                    Requisiten.</p>
+                <h3>Teil 2: Im Fokus</h3>
+                <p>Im zweiten Teil spielt der Beleuchtungskontrast weniger eine Rolle. Hier ging es mir primär darum,
+                    die Person und das MakeUp in den Fokus zu stellen. Vom Gesicht im Detail zum Körper als ganzes.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="photo-item">
+                    <a href="#img2">
+                        <img src="img/JuleRot01.jpg" alt="Clown Portrait 2">
+                    </a>
+                    <p class="img-caption">Nahaufnahme und Portrait. Im Fokus steht hierbei das Gesicht und MakeUp.</p>
+
+                    <div class="lightbox" id="img2">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/JuleRot01.jpg" alt="Clown Portrait 2 Groß">
+                            <p class="lightbox-caption">Nahaufnahme und Portrait. Im Fokus steht hierbei das Gesicht und
+                                MakeUp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <a href="#img3">
+                        <img src="img/JuleRot02.jpg" alt="Clown Portrait 3">
+                    </a>
+                    <p class="img-caption">Etwas weiter raus gezoomt. Das Gesicht weiterhin im Detail, jedoch auch der
+                        Hut als Accessoire im Fokus. Die leichte Schräge des Hutes betont zudem die Mimik noch etwas
+                        mehr. Das träge und melanchonische wird weiter betont.</p>
+
+                    <div class="lightbox" id="img3">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/JuleRot02.jpg" alt="Clown Portrait 3 Groß">
+                            <p class="lightbox-caption">Etwas weiter raus gezoomt. Das Gesicht weiterhin im Detail,
+                                jedoch auch der Hut als Accessoire im Fokus. Die leichte Schräge des Hutes betont zudem
+                                die Mimik noch etwas mehr. Das träge und melanchonische wird weiter betont.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <a href="#img4">
+                        <img src="img/JuleRot03.jpg" alt="Clown Portrait 4">
+                    </a>
+                    <p class="img-caption">Hier die Person als ganzes. Man sieht neben dem Gesichstsausdruck und dem Hut
+                        auch die Körperhaltung sowie die Kleidung.</p>
+
+                    <div class="lightbox" id="img4">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/JuleRot03.jpg" alt="Clown Portrait 4 Groß">
+                            <p class="lightbox-caption">Hier die Person als ganzes. Man sieht neben dem
+                                Gesichstsausdruck und dem Hut auch die Körperhaltung sowie die Kleidung.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Block 3 (Bilder 7-9) -->
         <section class="photo-block">
-            <div class="grid-3">
-                <div class="photo-item"><img src="img/clown7.jpg" alt="Clown Portrait 7">
-                    <p class="img-caption">Foto 7</p>
-                </div>
-                <div class="photo-item"><img src="img/clown8.jpg" alt="Clown Portrait 8">
-                    <p class="img-caption">Foto 8</p>
-                </div>
-                <div class="photo-item"><img src="img/clown9.jpg" alt="Clown Portrait 9">
-                    <p class="img-caption">Foto 9</p>
-                </div>
-            </div>
             <div class="block-description">
-                <h3>Teil 3: Kontraste und Details</h3>
-                <p>Deine Beschreibung für den dritten 3er-Block. Perfekt für technische Details oder die Stimmung
-                    während des Shootings.</p>
+                <h3>Teil 3: Einnahme des Raumes</h3>
+            </div>
+
+            <div class="grid-3">
+                <div class="photo-item">
+                    <a href="#img5">
+                        <img src="img/Zusammen03.jpg" alt="Clown Portrait 5">
+                    </a>
+                    <p class="img-caption">Zu der vorherigen Person stößt nun eine weitere Person bei. Die beiden
+                        schauen direktem Blick in die Kamera. Durch das rasten auf der Schulter steht Person 2 jedoch
+                        noch hinter Person 1.</p>
+
+                    <div class="lightbox" id="img5">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Zusammen03.jpg" alt="Clown Portrait 5 Groß">
+                            <p class="lightbox-caption">Zu der vorherigen Person stößt nun eine weitere Person bei. Die
+                                beiden schauen direktem Blick in die Kamera. Durch das rasten auf der Schulter steht
+                                Person 2 jedoch noch hinter Person 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <a href="#img6">
+                        <img src="img/Zusammen01.jpg" alt="Clown Portrait 6">
+                    </a>
+                    <p class="img-caption">Person 2 bewegt sich weiter in den Vordergrund. Nun stehen beide im Einklang
+                        nebeneinander.</p>
+
+                    <div class="lightbox" id="img6">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Zusammen01.jpg" alt="Clown Portrait 6 Groß">
+                            <p class="lightbox-caption">Person 2 bewegt sich weiter in den Vordergrund. Nun stehen beide
+                                im Einklang nebeneinander.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <a href="#img7">
+                        <img src="img/Zusammen02.jpg" alt="Clown Portrait 7">
+                    </a>
+                    <p class="img-caption">Person 2 steht nun im Vordergrund. Person 1 zieht sich weiter in den
+                        Hintergrund zurück und verschwindet hinter Person 2.</p>
+
+                    <div class="lightbox" id="img7">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Zusammen02.jpg" alt="Clown Portrait 7 Groß">
+                            <p class="lightbox-caption">Person 2 steht nun im Vordergrund. Person 1 zieht sich weiter in
+                                den Hintergrund zurück und verschwindet hinter Person 2.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Block 4 (Bilder 10-12) -->
         <section class="photo-block">
+            <div class="block-description">
+                <h3>Teil 4: Im Wechsel</h3>
+            </div>
+
             <div class="grid-3">
-                <div class="photo-item"><img src="img/clown10.jpg" alt="Clown Portrait 10">
-                    <p class="img-caption">Foto 10</p>
+                <div class="photo-item">
+                    <a href="#img8">
+                        <img src="img/Easy02.jpg" alt="Clown Portrait 8">
+                    </a>
+                    <p class="img-caption">Person 2 steht nun Komplett im Fokus. Man merkt nochmals den Kontrast
+                        zwischen den zwei Personen. Während Person 1 eher traurig und zurückgezogen wird, erscheint
+                        Person 2 selbstbewusster, obwohl durch das MakeUp auch hier eine starke emotionale Wirkung
+                        erzeugt wird. Auch der Hut fällt weiter ab was die heruntergezogenheit mehr zum Ausdruck bringt.
+                    </p>
+
+                    <div class="lightbox" id="img8">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Easy02.jpg" alt="Clown Portrait 8 Groß">
+                            <p class="lightbox-caption">Person 2 steht nun Komplett im Fokus. Man merkt nochmals den
+                                Kontrast zwischen den zwei Personen. Während Person 1 eher traurig und zurückgezogen
+                                wird, erscheint Person 2 selbstbewusster, obwohl durch das MakeUp auch hier eine starke
+                                emotionale Wirkung erzeugt wird. Auch der Hut fällt weiter ab was die
+                                heruntergezogenheit mehr zum Ausdruck bringt.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="photo-item"><img src="img/clown11.jpg" alt="Clown Portrait 11">
-                    <p class="img-caption">Foto 11</p>
+
+                <div class="photo-item">
+                    <a href="#img9">
+                        <img src="img/Easy01.jpg" alt="Clown Portrait 9">
+                    </a>
+                    <p class="img-caption">Person 2 ist nun ohne Hut im Fokus. Man merkt, dass die Person auch ohne Hut
+                        eine Emotionale Wirkung erzeugt.</p>
+
+                    <div class="lightbox" id="img9">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Easy01.jpg" alt="Clown Portrait 9 Groß">
+                            <p class="lightbox-caption">Person 2 ist nun ohne Hut im Fokus. Man merkt, dass die Person
+                                auch ohne Hut eine Emotionale Wirkung erzeugt.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="photo-item"><img src="img/clown12.jpg" alt="Clown Portrait 12">
-                    <p class="img-caption">Foto 12</p>
+
+                <div class="photo-item">
+                    <a href="#img10">
+                        <img src="img/Easy03.jpg" alt="Clown Portrait 10">
+                    </a>
+                    <p class="img-caption">Person 1 kommt zurück in den Fokus und rundet die Serie der Clowns mit einem
+                        letzten Blick in die Kamera ab.</p>
+
+                    <div class="lightbox" id="img10">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Easy03.jpg" alt="Clown Portrait 10 Groß">
+                            <p class="lightbox-caption">Person 1 kommt zurück in den Fokus und rundet die Serie der
+                                Clowns mit einem letzten Blick in die Kamera ab.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section class="photo-block">
             <div class="block-description">
-                <h3>Teil 4: Der Abschluss der Serie</h3>
-                <p>Die Beschreibung für die letzten drei Bilder. Ein finales Fazit zu deiner Abschlussaufgabe.</p>
+                <h3>Teil 5: In den Sternen</h3>
+                <p class="caption">Um die Serie abzuschließen wurden beide Personen nochmals gezeigt, jedoch in einem
+                    anderen Kostüm, jedoch mit dem selben MakeUp, um Konsistenz zu bewahren.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="photo-item">
+                    <a href="#img11">
+                        <img src="img/Stern02.jpg" alt="Clown Portrait 11">
+                    </a>
+                    <p class="img-caption">Person 2 wurde nochmals aufgegriffen und schaut mit direktem Blick in die
+                        Kamera.</p>
+
+                    <div class="lightbox" id="img11">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Stern02.jpg" alt="Clown Portrait 11 Groß">
+                            <p class="lightbox-caption">Person 2 wurde nochmals aufgegriffen und schaut mit direktem
+                                Blick in die Kamera.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <a href="#img12">
+                        <img src="img/Stern01.jpg" alt="Clown Portrait 12">
+                    </a>
+                    <p class="img-caption">Mit Person 1 schließt sich die Serie der Clowns und Sternen mit einem letzten
+                        Blick in die Ferne ab.</p>
+
+                    <div class="lightbox" id="img12">
+                        <a href="#_" class="lightbox-close"></a>
+                        <div class="lightbox-content">
+                            <img src="img/Stern01.jpg" alt="Clown Portrait 12 Groß">
+                            <p class="lightbox-caption">Mit Person 1 schließt sich die Serie der Clowns und Sternen mit
+                                einem letzten Blick in die Ferne ab.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

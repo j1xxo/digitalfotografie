@@ -1,0 +1,465 @@
+/* ==========================================================================
+   1. GOOGLE FONTS IMPORT
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;600;700&display=swap');
+
+/* ==========================================================================
+   2. REBOOT & BASE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    background-color: #151515;
+    color: #a9a9a9;
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px 0;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   3. GLOBAL LINKS & BUTTONS
+   ========================================================================== */
+a {
+    color: #8B0000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #FF4D4D;
+}
+
+/* ==========================================================================
+   4. HEADER & TYPOGRAPHY
+   ========================================================================== */
+header {
+    margin-bottom: 50px;
+    padding: 40px 20px 20px 20px;
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #e8e8e8;
+}
+
+/* ==========================================================================
+   5. BURGERMENU SYSTEM (Pure CSS Off-Canvas)
+   ========================================================================== */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 15px;
+    background-color: rgba(21, 21, 21, 0.7);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #ffffff;
+    height: 3px;
+    width: 28px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+.nav-toggle:checked~.nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #2b2b2b;
+    padding: 120px 30px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    text-align: left;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.side-nav a {
+    display: block;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.side-nav a:hover,
+.side-nav a.active {
+    padding-left: 10px;
+    color: #e0e0e0;
+    opacity: 1;
+}
+
+.side-nav a.active {
+    font-weight: 700;
+}
+
+.nav-toggle:checked~.side-nav {
+    transform: translateX(0);
+}
+
+/* ==========================================================================
+   6. RESPONSIVE FEED (Für die Galerien)
+   ========================================================================== */
+.gallery-page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Falls deine Blöcke oder Grids eine eigene Begrenzung haben, zieh sie hier ebenfalls mit hoch */
+.photo-block {
+    max-width: 1000px;
+    /* Falls du möchtest, dass die Texte (h3, p) nicht unendlich lang in die Breite gezogen werden... */
+    margin: 0 auto 60px auto;
+}
+
+.photo-block:last-of-type {
+    border-bottom: none;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+.block-description {
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.block-description h3 {
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+}
+
+/* Das Grid für die Bilder darf sich voll entfalten */
+.grid-3 {
+    max-width: 1600px;
+    /* Passt sich der maximalen Breite der Seite an */
+    margin: 0 auto;
+}
+
+.photo-item {
+    width: 100%;
+}
+
+/* Kleiner visueller Hinweis, dass man die Galeriebilder anklicken kann */
+.photo-item a {
+    display: block;
+    cursor: zoom-in;
+}
+
+.photo-item img {
+    width: auto;
+    /* Ermöglicht es dem Bild, schmaler zu werden, wenn die Höhe begrenzt wird */
+    max-width: 100%;
+    /* Verhindert, dass das Bild breiter als sein Container wird */
+    max-height: 80vh;
+    /* MAGIC LINE: Bild ist maximal 80% des Bildschirms hoch – ragt nie heraus! */
+    height: auto;
+    /* Behält das originale Seitenverhältnis perfekt bei */
+    display: block;
+    margin: 0 auto 20px auto;
+    /* Zentriert das Bild horizontal, falls es schmaler wird, und hält 20px Abstand nach unten */
+    transition: opacity 0.3s ease;
+}
+
+.photo-item img:hover {
+    opacity: 0.85;
+    /* Bild wird beim Hovern leicht weicher */
+}
+
+.img-caption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #8c8c8c;
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ==========================================================================
+   7. STARTSEITEN DESIGN (index.html)
+   ========================================================================== */
+.home-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hero-link-block {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.task-block {
+    background-image: url('img/Kontrast.jpg');
+}
+
+.archive-block {
+    background-image: url('img/archiv1.jpg');
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(21, 21, 21, 0.3), rgba(21, 21, 21, 0.75));
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-link-block h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-link-block p {
+    font-size: 1.05rem;
+    color: #e8e8e8;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.fake-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.hero-link-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-link-block:hover .hero-overlay {
+    background: linear-gradient(to bottom, rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.85));
+}
+
+.hero-link-block:hover .fake-btn {
+    background-color: #8B0000;
+    border-color: #8B0000;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   8. PURE CSS LIGHTBOX SYSTEM
+   ========================================================================== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 10, 10, 0.95);
+    /* Sehr dunkler, fast deckender Hintergrund */
+    z-index: 2000;
+    /* Liegt über absolut allem, auch dem Burgermenü */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    /* Klicks gehen durch, wenn unsichtbar */
+    transition: opacity 0.4s ease;
+}
+
+/* Der Zaubertrick: Wenn die ID im Link aufgerufen wird, blende die Lightbox ein */
+.lightbox:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Unsichtbarer Schließ-Link über den gesamten Hintergrund gelegt */
+.lightbox-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+}
+
+/* Der Container für das große Bild und den Text */
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 85vh;
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    /* Verhindert, dass das Bild über den Bildschirmrand hinausragt */
+    object-fit: contain;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Text unter dem vergrößerten Bild */
+.lightbox-caption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+footer {
+    margin-top: 60px;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   10. MEDIA QUERIES (Mobilgeräte)
+   ========================================================================== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .block-description h3 {
+        font-size: 1.6rem;
+    }
+
+    .side-nav {
+        width: 85%;
+    }
+
+    /* Erlaube der Galerie-Seite, sich deutlich weiter auszubreiten */
+    .gallery-page {
+        max-width: 1600px;
+        /* Vorher war hier vermutlich 1000px oder 1200px – 1600px ist perfekt für Laptops */
+        width: 90%;
+        /* Nutzt 90% der Bildschirmbreite auf kleineren Laptops */
+        margin: 0 auto;
+        /* Hält das Ganze trotzdem elegant in der Mitte des Monitors zentriert */
+        padding: 0 20px;
+        /* Ein kleiner Sicherheitsabstand zu den Rändern */
+    }
+
+    .hero-link-block {
+        height: 280px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-link-block h2 {
+        font-size: 1.5rem;
+    }
+}
