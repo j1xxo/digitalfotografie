@@ -270,11 +270,11 @@ h1 {
 }
 
 .task-block {
-    background-image: url('img/Kontrast.jpg');
+    background-image: url('img/Stern01.jpg');
 }
 
 .archive-block {
-    background-image: url('img/archiv1.jpg');
+    background-image: url('img/LisaAugen.jpg');
 }
 
 .hero-overlay {
@@ -462,4 +462,43 @@ footer {
     .hero-link-block h2 {
         font-size: 1.5rem;
     }
+
+    /* ==========================================================================
+    11. CUSTOM CURSOR DESIGN
+    ========================================================================== */
+
+    /* Cursor für die Startseite (Home) */
+    #home-page,
+    #home-page a,
+    #home-page label,
+    #home-page .hero-link-block {
+        cursor: url('./img/home.png'), auto !important;
+    }
+
+    /* Cursor für die Clown-Portraits Seite */
+    #clown-page,
+    #clown-page a,
+    #clown-page label,
+    #clown-page .photo-item img {
+        cursor: url('./img/clownCursor.png'), auto !important;
+    }
+
+    /* Cursor für die Best-of / Archiv Galerie Seite */
+    #retro-page,
+    #retro-page a,
+    #retro-page label,
+    #retro-page .photo-item img {
+        cursor: url('./img/retro.png'), auto !important;
+    }
+
+    /* Wichtig: Wenn ein Bild in der Lightbox geöffnet ist, 
+    wollen wir zum Schließen wieder die normale Lupe haben */
+    .lightbox-close {
+        cursor: zoom-out !important;
+    }
+
+    .photo-item a {
+        cursor: zoom-in !important;
+    }
+
 }
